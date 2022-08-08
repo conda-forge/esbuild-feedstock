@@ -12,8 +12,6 @@ build:
   number: 1
   # Go-built binaries do not react well to prefix replacement. They don't need it, though.
   binary_relocation: False
-  script: make esbuild && mkdir -p $PREFIX/bin && cp esbuild $PREFIX/bin/esbuild             # [unix]
-  script: make esbuild && IF NOT EXIST "%LIBRARY_BIN%" MKDIR "%LIBRARY_BIN%" && COPY esbuild.exe "%LIBRARY_BIN%\esbuild.exe"  # [win]
 
 requirements:
   build:
