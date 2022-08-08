@@ -11,16 +11,15 @@ source:
 build:
   number: 0
   # Go-built binaries do not react well to prefix replacement. They don't need it, though.
-  binary_relocation: false
-  script: go build -o $PREFIX/bin/esbuild ./cmd/esbuild  # [unix]
-  script: go build -o %LIBRARY_BIN%\esbuild.exe .\cmd\esbuild  # [win]
+  binary_relocation: False
 
 requirements:
   build:
-    - {{ compiler('c') }}
-  host:
-    - go
-    - go-cgo
+    - {{ compiler('go-nocgo') }}
+    - make     # [unix]
+    - m2-base  # [win]
+    - m2-make  # [win]
+    - nodejs
 
 test:
   commands:
