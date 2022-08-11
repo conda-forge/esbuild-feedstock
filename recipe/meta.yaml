@@ -1,4 +1,4 @@
-{% set version = "0.14.54" %}
+{% set version = "0.15.1" %}
 
 package:
   name: esbuild
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/evanw/esbuild/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 007cac78ffe81ec4e8d2a33547ca908cc68997ea39dbcbbf6ae56646caae3769
+  sha256: 8989d9f8bf0ebe6e9bed2297991721f7ca3a2a17293a66368a9df43a60918431
 
 build:
   number: 0
   # Go-built binaries do not react well to prefix replacement. They don't need it, though.
-  binary_relocation: False
+  binary_relocation: false
 
 requirements:
   build:
