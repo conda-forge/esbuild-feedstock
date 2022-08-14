@@ -1,4 +1,4 @@
-{% set version = "0.15.1" %}
+{% set version = "0.15.3" %}
 
 package:
   name: esbuild
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/evanw/esbuild/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 8989d9f8bf0ebe6e9bed2297991721f7ca3a2a17293a66368a9df43a60918431
+  sha256: 7749207f015c42812cf2d1dab8b10fdeefd986142e1444cb470d9126792c4d0d
 
 build:
   number: 0
