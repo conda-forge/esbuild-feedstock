@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 0.25.7
+  version: "0.25.8"
 
 package:
   name: esbuild
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/evanw/esbuild/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: b972ae207f89a8e60b1972a8db7cc87816fdf56b7a8818c4dd3189041f6956b4
+  sha256: d2a20b2644261154819846f42acfe270d26caa77be05431a3b00a1122941a662
 
 build:
   # Go-built binaries do not react well to prefix replacement. They don't need it, though.
@@ -23,9 +23,9 @@ requirements:
     - if: unix
       then: make
     - if: win
-      then: m2-base
-    - if: win
-      then: m2-make
+      then:
+        - m2-base
+        - m2-make
     - nodejs >=14
 
 tests:
